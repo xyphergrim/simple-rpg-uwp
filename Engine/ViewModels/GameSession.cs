@@ -13,13 +13,15 @@ namespace Engine.ViewModels
 
         public GameSession()
         {
-            CurrentPlayer = new Player();
-            CurrentPlayer.Name = "George";
-            CurrentPlayer.CharacterClass = "Warrior";
-            CurrentPlayer.HitPoints = 14;
-            CurrentPlayer.ExperiencePoints = 0;
-            CurrentPlayer.Level = 1;
-            CurrentPlayer.Gold = 10;
+            CurrentPlayer = new Player {
+                Name = "George",
+                CharacterClass = "Warrior",
+                HitPoints = 14,
+                ExperiencePoints = 0,
+                Level = 1,
+                Gold = 10,
+            };
+           
         }
     }
 }

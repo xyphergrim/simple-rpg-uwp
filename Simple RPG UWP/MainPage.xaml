@@ -23,8 +23,34 @@
         <Rectangle Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Fill="AliceBlue"/>
         <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Menu" Foreground="Black"/>
         
-        <Rectangle Grid.Row="1" Grid.Column="0" Fill="Aquamarine"/>
-        <TextBlock Grid.Row="1" Grid.Column="0" Text="Player Data" Foreground="Black"/>
+        <Grid Grid.Row="1" Grid.Column="0" Background="Aquamarine">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Name:" Foreground="Black"/>
+            <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding CurrentPlayer.Name}" Foreground="Black"/>
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Class:" Foreground="Black"/>
+            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding CurrentPlayer.CharacterClass}" Foreground="Black"/>
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="HP:" Foreground="Black"/>
+            <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding CurrentPlayer.HitPoints}" Foreground="Black"/>
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Gold:" Foreground="Black"/>
+            <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding CurrentPlayer.Gold}" Foreground="Black"/>
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="XP:" Foreground="Black"/>
+            <TextBlock Grid.Row="4" Grid.Column="1" Text="{Binding CurrentPlayer.ExperiencePoints}" Foreground="Black"/>
+            <TextBlock Grid.Row="5" Grid.Column="0" Text="Level:" Foreground="Black"/>
+            <TextBlock Grid.Row="5" Grid.Column="1" Text="{Binding CurrentPlayer.Level}" Foreground="Black"/>
+        </Grid>
         
         <Rectangle Grid.Row="1" Grid.Column="1" Fill="Beige"/>
         <TextBlock Grid.Row="1" Grid.Column="1" Text="Game Data" Foreground="Black"/>
