@@ -8,6 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+    <!-- Main Window Grid Layout -->
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -23,6 +24,7 @@
         <Rectangle Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Fill="AliceBlue"/>
         <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Menu" Foreground="Black"/>
         
+        <!-- Grid Layout for Player Data -->
         <Grid Grid.Row="1" Grid.Column="0" Background="Aquamarine">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -51,9 +53,46 @@
             <TextBlock Grid.Row="5" Grid.Column="0" Text="Level:" Foreground="Black"/>
             <TextBlock Grid.Row="5" Grid.Column="1" Text="{Binding CurrentPlayer.Level}" Foreground="Black"/>
         </Grid>
-        
-        <Rectangle Grid.Row="1" Grid.Column="1" Fill="Beige"/>
-        <TextBlock Grid.Row="1" Grid.Column="1" Text="Game Data" Foreground="Black"/>
+
+        <!-- Grid Layout for Location Data -->
+        <Grid Grid.Row="1" Grid.Column="1" Background="Beige">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Row="0" Grid.Column="1" BorderBrush="Gainsboro" BorderThickness="1">
+                <Grid Margin="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" 
+                               HorizontalAlignment="Center" 
+                               Text="{Binding CurrentLocation.Name}" 
+                               Foreground="Black"/>
+
+                    <Image Grid.Row="1" 
+                           HorizontalAlignment="Center" 
+                           VerticalAlignment="Center" 
+                           Height="125" 
+                           Width="125" 
+                           Source="{Binding CurrentLocation.ImageName}"/>
+
+                    <TextBlock Grid.Row="2" 
+                               HorizontalAlignment="Center" 
+                               Text="{Binding CurrentLocation.Description}" 
+                               Foreground="Black"/>
+                </Grid>
+            </Border>
+        </Grid>
         
         <Rectangle Grid.Row="2" Grid.Column="0" Fill="BurlyWood"/>
         <TextBlock Grid.Row="2" Grid.Column="0" Text="Inventory/Quests" Foreground="Black"/>

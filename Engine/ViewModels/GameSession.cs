@@ -10,6 +10,7 @@ namespace Engine.ViewModels
     public class GameSession
     {
         public Player CurrentPlayer { get; set; }
+        public Location CurrentLocation { get; set; }
 
         public GameSession()
         {
@@ -21,7 +22,13 @@ namespace Engine.ViewModels
                 Level = 1,
                 Gold = 10,
             };
-           
+
+            CurrentLocation = new Location();
+            CurrentLocation.Name = "Home";
+            CurrentLocation.XCoordinate = 0;
+            CurrentLocation.YCoordinate = -1;
+            CurrentLocation.Description = "This is your home.";
+            CurrentLocation.ImageName = "Assets/Locations/Home.png";
         }
     }
 }

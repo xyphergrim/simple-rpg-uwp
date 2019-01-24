@@ -131,6 +131,15 @@
     <None Include="Simple RPG UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Locations\FarmFields.png" />
+    <Content Include="Assets\Locations\Farmhouse.png" />
+    <Content Include="Assets\Locations\HerbalistsGarden.png" />
+    <Content Include="Assets\Locations\HerbalistsHut.png" />
+    <Content Include="Assets\Locations\Home.png" />
+    <Content Include="Assets\Locations\SpiderForest.png" />
+    <Content Include="Assets\Locations\TownGate.png" />
+    <Content Include="Assets\Locations\TownSquare.png" />
+    <Content Include="Assets\Locations\Trader.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
